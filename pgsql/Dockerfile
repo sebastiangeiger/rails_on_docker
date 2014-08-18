@@ -33,8 +33,8 @@ USER postgres
 # Note: here we use ``&&\`` to run commands one after the other - the ``\``
 #       allows the RUN command to span multiple lines.
 RUN    /etc/init.d/postgresql start &&\
-    psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\
-    createdb -O docker docker
+    psql --command "CREATE USER rails_sample_app_user WITH SUPERUSER PASSWORD 'kjLlPJjJqWD9VCjBuqWeSPA1P';" &&\
+    createdb -O rails_sample_app_user rails_sample_app_production
 
 # Adjust PostgreSQL configuration so that remote connections to the
 # database are possible.
